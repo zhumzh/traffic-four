@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="calendar.css"/>
+        <script type="text/javascript">
+			(function (doc, win) {
+				var docEl = doc.documentElement,
+				    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				    recalc = function () {
+				        var clientWidth = docEl.clientWidth;
+				        if (!clientWidth) return;
+				        if(clientWidth>=750){
+				            docEl.style.fontSize = '100px';
+				        }else{
+				            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				        }
+				    };
+				
+				if (!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="head">
+				<a href="index.html" class="left"></a>
+				<p>限行日历</p>
+			</div>
+			<div class="box">
+				<section class="date" id="calendar">
+					<div class="head">
+						<div class="prev"></div>
+						<div class="tomon"><span class="year"></span>年 <span class="month"></span>月</div>
+						<div class="next"></div>
+					</div>
+					<ol><li>周日</li><li>周一</li><li>周二</li><li>周三</li><li>周四</li><li>周五</li><li>周六</li></ol>
+					<ul>
+						<li>日期</li><li>日期</li><li>日期</li><li>日期</li><li>日期</li><li>日期</li><li>日期</li>
+					</ul>
+				</section>
+			</div>
+			<div class="foot">
+				<ul>
+					<li><span style="background: #19CE63;"></span>可行日</li>
+					<li><span style="background: #E25053;"></span>禁行日</li>
+					<li><span style="background: #C2C2C2;"></span>违法</li>
+				</ul>
+				<div class="remarks">
+					<p>*节日通行按停驶计算</p>
+					<p>*违反规定将处200元罚款并记3分</p>
+				</div>
+			</div>
+		</div>
+		<script src="jquery-1.7.2.min.js"></script>
+		<script src="calendar.js"></script>
+	</body>
+</html>

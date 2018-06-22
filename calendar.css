@@ -1,0 +1,243 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+/*公用样式*/
+body,header{
+	min-width: 320px;
+    max-width: 750px;
+    height: 100%;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    margin: 0px auto;
+}
+.main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.head{
+	height: .8rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 .2rem;
+	background: #01ACF1;
+}
+.head p{
+	font-size: .38rem;
+	line-height: .8rem;
+	color: #fff;
+	font-weight: 500;
+}
+.head a{
+	text-decoration: none;
+	color: #fff;
+	font-size: .3rem;
+}
+.head .left{
+	display: block;
+	width: .4rem;
+	height: .4rem;
+	background: url(image/btn-left.png)no-repeat;
+	background-size: 100%;
+}
+.calendar-box{
+	width: 100%;
+	height: 4rem;
+}
+
+.box{
+	width: 100%;
+}
+.box .head{
+	padding: 0 1rem;
+	height:.8rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #F6F6F6;
+}
+.box .head .prev{
+	width: .5rem;
+	height: .5rem;
+	background: url(image/boxLeft.png)0 center no-repeat;
+	background-size: .5rem;
+}
+.head .next{
+	width: .5rem;
+	height: .5rem;
+	background: url(image/boxRight.png)0 center no-repeat;
+	background-size: .5rem;
+}
+.box .head .tomon{
+	float: left;
+	text-align: center;
+	line-height: .8rem;
+	font-size: .3rem;
+	color: #FF3D34;
+}
+.date ol{
+	width: 100%;
+	height: .6rem;
+	padding: 0;
+	display: flex;
+}
+.date ol li{
+	display:block;
+	width: 14.2857%;
+	text-align: center;
+	font-size: .26rem;
+	color: #333;
+	border: none;
+	padding: 0;
+	line-height: .6rem;
+	height: .6rem;
+	background: #F6F6F6;
+}
+.date ul{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background: #fafafa;
+}
+.date ul li{
+	display: block;
+	width: 14.28%;
+	height: 14%;
+	text-align: center;
+	font-size: .26rem;
+	background: #fff;
+	position: relative;
+	margin: .1rem 0;
+	background: #fafafa;
+}
+.date ul li .jr{
+	font-size: 10px;
+	white-space: nowrap;
+	position: absolute;
+	right: 0;
+	bottom:0;
+	display:block;
+	height: 20px;
+	line-height: 20px;
+	width: 100%;
+	text-align: center;
+	color: #e35925;
+}
+.date ul li span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: .9rem;
+	text-align: center;
+}
+.date ul .sr{
+	background:#E4FBF1;
+	border-radius: 50%;
+}
+.date ul .no_date{
+	background: #fafafa;
+	color: #999;
+	line-height: .9rem;
+}
+.date ul .act_wk{
+	color: #e35925;
+}
+.date ul .act_date{
+	background: #19CE63;
+	color: #fff;
+	border-radius: 50%;
+}
+.date ul .act_ds{
+	background: #E25053;
+	color: #fff;
+	border-radius: 50%;
+}
+.date ul .act_ds2{
+	background: #E25053;
+	color: #fff;
+	border-radius: 50%;
+}
+.date ul .act_wf{
+	background: #C2C2C2;
+	color: #fff;
+	border-radius: 50%;
+}
+.remarks{
+	font-size: .2rem;
+	color: #007AFF;
+	text-align: center;
+}
+.foot{
+	width: 100%;
+	margin-top: .4rem;
+}
+.foot ul{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	line-height: 1rem;
+}
+.foot li {
+	display: flex;
+	align-items: center;
+	color: #333;
+}
+.foot li span{
+	display: block;
+	width: .32rem;
+	height: .32rem;
+	margin-right: .1rem;
+	margin-left: .2rem;
+	border-radius: 50%;
+}
+
+.date .item{
+	position: relative;
+}
+.date .gray_day span{
+	color: gray;
+}
+
+.date ul .item.holiday i{
+	color: #c31212;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	font-size: .12rem;
+	font-style: normal;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.date ul .act{
+	background: #19CE63;
+	color: #fff;
+	border-radius: 50%;
+}
+.date ul .stop{
+	background: #E25053;
+	color: #fff;
+	border-radius: 50%;
+}
+.date ul .wrong{
+	background: #C2C2C2;
+	color: #fff;
+	border-radius: 50%;
+}
